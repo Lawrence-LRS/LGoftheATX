@@ -1,0 +1,206 @@
+/*support section for index page*/
+.support{
+	text-align: center;
+	background-color: #ECECEC;
+	padding-top:-50px;
+	padding-bottom:50px;
+	z-index: 1;
+}
+
+.support .page-header{
+	height: 40px;
+	margin:0;
+	padding:0;
+}
+
+
+.support .rowBorder{
+	position:relative;
+	margin:auto;
+	width:75%;
+	border-top: 1px solid grey;
+}
+
+.support .col-xs-4, .col-sm-4, .col-md-4{
+padding-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.support .img-thumbnail{
+	border:0.125px solid grey;
+	padding:2px;
+
+	/* Gray Scale */
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+	/* Shine */
+	position: relative;
+	z-index: 0;
+}
+
+.support .img-thumbnail:hover{
+	/* Gray Scale */
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+
+	/* Flashing */
+	opacity: 1;
+	-webkit-animation: flash .75s;
+	animation: flash .75s;
+}
+
+/* Flashing */
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.support .img-thumbnail:active{
+	background-color: rgba(0,0,0,.5);
+	transform: scale(.95);
+}
+
+
+.support .Lthumbnail{
+	float:right;
+}
+
+.support .Rthumbnail{
+	float:left;
+}
+
+.support .caption{
+	max-width: 160px;
+	text-align: center;
+	margin:auto;
+}
+
+
+.support h3{
+	padding-left:30px;
+	text-align: left;
+}
+
+
+
+
+#SDthumbL {
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+#SDthumb{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+#SDthumbR{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+
+
+
+
+#GDthumbL{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+#GDthumb{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+#GDthumbR{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+
+
+
+
+#WDthumbL{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+#WDthumb{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+#WDthumbR{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+
+
+#GthumbL{
+	background-image: url("../img/Skyline_cropped.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+#Gthumb{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+#GthumbR{
+	background-image: url("../img/imageToCome.jpg");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}

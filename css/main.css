@@ -1,0 +1,171 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+}
+
+/* *{border: 1px dashed blue;
+}
+*/
+/*Header information ALL PAGES*/
+.header{
+	background-color: rgba(0,0,0,.5);
+	height: 100px;
+	
+	margin: -50px -30px 0 -30px;
+	min-width: 750px;
+
+	width:100%;
+	position:fixed;
+	z-index: 5;
+/*	position:fixed; when I get Jquery added will hide 
+on scroll down and appear on scroll up
+ unless top pixel =0*/
+}
+
+.header .logo{
+	float:left;
+
+	height:75px;
+	width:75px;
+	margin-top: -10px;
+}
+
+.header .title{
+	text-align: center;
+	font-size:24px;
+	margin-left: 50px;
+	margin-top: -9px;
+	color: white;
+	max-width: 275px;
+	position:relative;
+}
+
+.header .titleLogo{
+	margin-top: 35px;
+}
+
+.header .navagation{
+	float:right;
+	margin: 0;
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+.header ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header li {
+  display: inline;
+  line-height: 30px;
+}
+
+
+.header .menu{
+	border: 1px solid black;
+	border-radius:5px;
+	display:inline;
+	margin:0 5px 0 5px;
+	padding:0 5px 0 5px;
+	color:white;
+}
+/* more to be done with button hovers */
+.header .menu:hover{
+	background-color: black;
+}
+
+.header a{
+	text-decoration: none;
+	color:white;
+}
+
+
+
+
+
+
+
+
+.header .dropdown {
+  position: relative;
+}
+
+.header .dropdown-menu {
+  position: absolute;
+  top: 20px;
+  border-radius: 0;
+}
+
+.header .dropdown-menu li {
+  display: block;
+  margin: 0;
+  padding: 3px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.jumbotron{
+  background-image: url("../img/Skyline_cropped.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+
+  margin:0;
+}
+
+.Jumbo-title{
+  position: relative;
+  margin-top: 425px;
+}
+
+.Jumbo-title h2{
+  color: white;
+  text-align: center;
+  min-width: 550px;
+  max-width: 675px;
+  margin: auto;
+}
+
+.wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+/*Footer section for copyright image placement and colors*/
+.footer{
+	background-color: #C0C0C0;
+	color:white;
+
+	position: absolute;
+	right:0;
+ 	bottom: 0;
+ 	left: 0;
+
+  	min-width: 750px;
+   	height:45px;
+}
+.copyRightSpot{
+	margin-top:10px;
+}
+
+.socialMedia{
+	border: 1px solid black;
+	border-radius:5px;
+	display:inline;
+	margin:0 5px 0 5px;
+	margin-top:5px;
+	padding-top:0;
+	float:right;
+}

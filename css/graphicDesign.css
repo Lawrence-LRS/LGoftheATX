@@ -1,0 +1,41 @@
+.support{
+	background-color: #ECECEC;
+	padding-bottom:30px;
+	padding-top:10px;
+}
+
+.graphicDesign h1{
+	padding-left:50px;
+	color:red;
+}
+
+.graphicDesign h4{
+	padding:0 0 0 80px;
+	margin:0;
+}
+
+.textdescription{
+	padding:10px 0 0 100px;
+	font-size: 16px;
+}
+
+
+
+
+
+.images p{
+	margin-bottom:-5px;
+}
+
+.profile{
+	height:auto;
+	width:auto;
+	padding-top: 10px;
+	margin:0;
+}
+.graphicDesignBorder{
+	border-bottom:1px solid grey;
+	width:75%;
+	padding-top:5px;
+	margin:auto;
+}
