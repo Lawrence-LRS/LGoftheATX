@@ -3,8 +3,8 @@ html, body {
   padding: 0;
   font-family: 'Merriweather', serif;
 }
-
-/* *{border: 1px dashed blue;
+/*
+ *{border: 1px dashed blue;
 }
 */
 /*Header information ALL PAGES*/
@@ -18,9 +18,7 @@ html, body {
 	width:100%;
 	position:fixed;
 	z-index: 5;
-/*	position:fixed; when I get Jquery added will hide 
-on scroll down and appear on scroll up
- unless top pixel =0*/
+
 }
 
 .header .logo{
@@ -42,13 +40,13 @@ on scroll down and appear on scroll up
 }
 
 .header .titleLogo{
-	margin-top: 35px;
+	margin-top: 30px;
 }
 
 .header .navagation{
 	float:right;
 	margin: 0;
-	margin-top: 20px;
+	padding-top: 30px;
 	font-size: 24px;
 }
 
@@ -81,27 +79,31 @@ on scroll down and appear on scroll up
 	color:white;
 }
 
-
-
-
-
-
-
-
-.header .dropdown {
-  position: relative;
+.animHeaderUp {
+	-webkit-transition: -webkit-transform 1.5s ease-in-out;
+	-webkit-transform:translate(0,-500px);
 }
 
+
+
+
+
+
+
 .header .dropdown-menu {
-  position: absolute;
-  top: 20px;
-  border-radius: 0;
+ 
+  
+  border-radius: 5px;
+
+	margin:0 5px 0 5px;
+	padding:0 5px 0 5px;
+	color:white;
 }
 
 .header .dropdown-menu li {
   display: block;
   margin: 0;
-  padding: 3px 10px;
+  padding: auto 10px;
 }
 
 

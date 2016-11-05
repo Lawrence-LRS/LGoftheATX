@@ -8,8 +8,24 @@
 	var lastScrollTop = 0;
 	var delta = 5; // eliminates microscrolling 
 	var didScroll; // scroll boolean
-
-
+	var sectionView = {
+		SD:{
+			visib: false,
+			firstView: false
+		},
+		GD:{
+			visib: false,
+			firstView: false
+		},
+		WD:{
+			visib: false,
+			firstView: false
+		},
+		G:{
+			visib: false,
+			firstView: false
+		}
+	};
 
 
 // main function that runs once document is loaded
@@ -29,11 +45,14 @@ var main = function() {
 	// This function repeats every 1/4th second, if scrolled recently decides how to effect header.
 	setInterval(function() {
 	    if (didScroll) {
-	        hasScrolled();
-	        checkWindowView();// home page animation specific based on window location
+	        animateHeader();
+	        checkWindowView(); // home page window locator
+	        animateSections(); // home page animation of sections
 	        didScroll = false;
 	    }
 	}, 250);
+
+ 
 
 
 //////////////////////////////////////////////////////////////////
@@ -77,7 +96,7 @@ $(document).ready(main);
 
 
 	// function that if scrolled will hide the header section.
-function hasScrolled(){
+function animateHeader(){
 	newScrollTop = $(this).scrollTop(); // new scrolltop number
 	
 	// the scroll distance is farther than the delta proceede or else nothing
@@ -87,11 +106,11 @@ function hasScrolled(){
 
 	if (newScrollTop > lastScrollTop){ 
 		//we have scrolled down
-		
-		$('.header').slideUp('slow');
-		$('.header').fadeOut();
+		$('.header').addClass('animHeaderUp');
+		$('.header').fadeOut('slow');
 	} else { 
 		//we have scrolled up 
+		$('.header').removeClass('animHeaderUp');
 		$('.header').fadeIn();
 	}
 
@@ -99,10 +118,8 @@ function hasScrolled(){
 	lastScrollTop = newScrollTop;
 }
 
-
-
-
-
+	// used to check window lowcation and run hide show functions
+	// forgive me
 function checkWindowView(){
 		
 		// Widown dimensions
@@ -114,7 +131,6 @@ function checkWindowView(){
 	var SDelementHeight = $('#SDanimationElement').outerHeight();
 	var SDelementTopPosition = $('#SDanimationElement').offset().top;
 	var SDelementMidPosition = ( SDelementTopPosition + SDelementHeight);
-	var SDinView = false;
 
 		// graphic development element sizing
 	var GDelementHeight = $('#GDanimationElement').outerHeight();
@@ -134,57 +150,106 @@ function checkWindowView(){
 
 	//check to see if next container is in window
 	if (SDelementMidPosition >= windowTopPosition && SDelementTopPosition <= windowBottomPosition) {
-		
-		// Software dev from the left
-		
-			console.log("software development in field")
-		$('#SDanimationElement').css('visibility', 'visible');	
-		$('.SDanimateL').fadeIn("slow");
-		$('.SDanimateC').fadeIn("slow");
-		$('.SDanimateR').fadeIn("slow");
-		
-		
-
+		console.log("software development in field");
+		sectionView.SD.visib = true;
 	} else {
-		console.log("software dev not in field")
-		$('#SDanimationElement').css('visibility', 'hidden');
-
+		sectionView.SD.visib = false;
 	}
-
 
 	if (GDelementMidPosition >= windowTopPosition && GDelementTopPosition <= windowBottomPosition) {
-		// game dev from the right
-		$('.GDanimateL').delay().fadeIn();
-		$('.GDanimateC').delay(500).fadeIn();
-		$('.GDanimateR').delay(1000).fadeIn();
-
+		console.log("Game development in field");
+		sectionView.GD.visib = true;
 	} else {
-		$('.GDanimationElement').fadeOut()
-		
+		sectionView.GD.visib = false;
 	}
-
-
 
 	if (WDelementMidPosition >= windowTopPosition && WDelementTopPosition <= windowBottomPosition) {
-		// web dev from the left
-		$('.WDanimateL').delay().fadeIn();
-		$('.WDanimateC').delay(500).fadeIn();
-		$('.WDanimateR').delay(1000).fadeIn();
-
+		console.log("Web development in field");
+		sectionView.WD.visib = true;
 	} else {
-		$('.WDanimationElement').fadeOut()
-
+		sectionView.WD.visib = false;
 	}
-
-
 
 	if (GelementMidPosition >= windowTopPosition && GelementTopPosition <= windowBottomPosition) {
-		// graphic design from the right
-		$('.GanimateL').delay().fadeIn();
-		$('.GanimateC').delay(500).fadeIn();
-		$('.GanimateR').delay(1000).fadeIn();
-
+		console.log("Graphic Design in field");
+		sectionView.G.visib = true;
 	} else {
-		$('.GanimationElement').fadeOut()
+		sectionView.G.visib = false;
 	}
 }
+
+function animateSections(){
+
+	if (sectionView.SD.visib && sectionView.SD.firstView){
+		console.log("software dev run animation")
+		// run animation
+		$('.SDanimateL').animate({marginRight: '-=300px'},2000);
+		$('.SDanimateC').animate({marginRight: '-=600px'},2000);
+		$('.SDanimateR').animate({marginRight: '-=900px'},2000);
+
+		sectionView.SD.firstView = false;
+
+	} else if ( sectionView.SD.visib == false && sectionView.SD.firstView == false){
+		sectionView.SD.firstView = true;
+		console.log("software dev reset to first view")
+		$('.SDanimateL').animate({marginRight: '+=300px'},0000);
+		$('.SDanimateC').animate({marginRight: '+=600px'},0000);
+		$('.SDanimateR').animate({marginRight: '+=900px'},0000);
+		// $('.SDanimateL').css({marginRight: '-=300px'});
+		// $('.SDanimateC').css({marginRight: '-=300px'});
+		// $('.SDanimateR').css({marginRight: '-=300px'});
+	}
+
+
+
+		// $('#SDanimationElement').css('visibility', 'visible').delay(500);	
+		// $('#SDanimationElement').css('visibility', 'hidden');
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// 	if (GDelementMidPosition >= windowTopPosition && GDelementTopPosition <= windowBottomPosition) {
+// 		// game dev from the right
+// 		$('.GDanimateL').delay().fadeIn();
+// 		$('.GDanimateC').delay(500).fadeIn();
+// 		$('.GDanimateR').delay(1000).fadeIn();
+
+// 	} else {
+// 		$('.GDanimationElement').fadeOut()
+		
+// 	}
+
+
+
+// 	if (WDelementMidPosition >= windowTopPosition && WDelementTopPosition <= windowBottomPosition) {
+// 		// web dev from the left
+// 		$('.WDanimateL').delay().fadeIn();
+// 		$('.WDanimateC').delay(500).fadeIn();
+// 		$('.WDanimateR').delay(1000).fadeIn();
+
+// 	} else {
+// 		$('.WDanimationElement').fadeOut()
+
+// 	}
+
+
+
+// 	if (GelementMidPosition >= windowTopPosition && GelementTopPosition <= windowBottomPosition) {
+// 		// graphic design from the right
+// 		$('.GanimateL').delay().fadeIn();
+// 		$('.GanimateC').delay(500).fadeIn();
+// 		$('.GanimateR').delay(1000).fadeIn();
+
+// 	} else {
+// 		$('.GanimationElement').fadeOut()
+// 	}
+// }
