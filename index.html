@@ -37,9 +37,9 @@
 								<ul>
 									<li class="menu" > <a href="pages/About.html"> About </a> </li>
 
-									<li class="menu ">
-										<a class = "portfolio"> Portfolio <span class="caret"> </span></a>
-										<ul class="dropdown-menu">
+									<li class="menu dropdown">
+			 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <span class="caret"></span></a>				
+			  							<ul class="dropdown-menu" role="menu">
 											<li> <a href="#"> Software Development </a> </li> 
 											<li> <a href="#"> Game Development </a> </li> 
 											<li> <a href="#"> Web Development </a> </li> 
@@ -69,163 +69,138 @@
 <!-- Middle section (meat of the page) / the intention is to have this update automatically 
 to show the latest projects in each field to entice a look at a library page and move onto all projects-->
 	<div class="support">
-		<div class="container-fluid">
-			<div class="page-header">
-				<h1> <u> <strong> Selected portfolio projects </strong> </u> </h1>
-			</div>		
-
-			<div class="row" id="SDanimationElement">
-				<div>
-					<h3> <strong> Latest: Software Development </strong></h3>
-					<div class="rowBorder"> </div>
-					<div class="col-xs-4 .col-sm-4 col-md-4 SDanimateL">
-						<div class="Lthumbnail">
-							<a class="img-thumbnail" href="#"><div id="SDthumbL"></div></a>
-							<div class="caption">
-								<!-- active title changing based on project loaded onto page Jquery -->
-								<h4 class="first_SD_title"> Insert Title of project </h4>
-							</div>					
-						</div>
-					</div>
-
-					<div class="col-xs-4 .col-sm-4 col-md-4 SDanimateC">
-						<div class="Cthumbnail">
-							<a class="img-thumbnail" href="#"><div id="SDthumb"></div></a>
-							<div class="caption">
-								<h4 class="second_SD_title"> Insert Title of project </h4>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-4 .col-sm-4 col-md-4 SDanimateR">
-						<div class="Rthumbnail">
-							<a class="img-thumbnail" href="#"><div id="SDthumbR"></div></a>
-							<div class="caption">
-								<h4 class="third_SD_title"> Insert Title of project </h4>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
+		<div class="contianer-fluid">
 			<div class="row">
-				<div id="GDanimationElement">
-					<h3> <strong> Latest: Game Development </strong></h3>
-					<div class="rowBorder"> </div>
-					<div class="col-xs-4 .col-sm-4 col-md-4">
-						<div class="Lthumbnail">
-							<div class="GDanimateL">
-								<a class="img-thumbnail" href="#"><div id="GDthumbL"></div></a>
-								<div class="caption">
-									<!-- active title changing based on project loaded onto page Jquery -->
-									<h4 class="first_GD_title"> Insert Title of project </h4>
-								</div>
-							</div>
-						</div>
-					</div>
+				<div class="col-xs-10 .col-sm-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					<div class="container-fluid">
 
-					<div class="col-xs-4 .col-sm-4 col-md-4">
-						<div class="Cthumbnail">
-							<div class="GDanimateC">
-								<a class="img-thumbnail" href="#"><div id="GDthumb"></div></a>
-								<div class="caption">
-									<h4 class="second_GD_title"> Insert Title of project </h4>
-								</div>
-							</div>
-						</div>
-					</div>
+						<div class="page-header">
+							<h1> <u> <strong> Selected portfolio projects </strong> </u> </h1>
+						</div>		
 
-					<div class="col-xs-4 .col-sm-4 col-md-4">
-						<div class="Rthumbnail">
-							<div class="GDanimateR">
-								<a class="img-thumbnail" href="#"><div id="GDthumbR"></div></a>
-								<div class="caption">
-									<h4 class="third_GD_title"> Insert Title of project </h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+						<div class="row" id="SDanimationElement">
+							<h3> <strong> Latest: Software Development </strong></h3>
+							<div class="rowBorder"> </div>
+							<div class ="thumbnailRow">
 
-			<div class="row">
-				<div id="WDanimationElement">
-					<h3> <strong> Latest: Web Development </strong></h3>
-					<div class="rowBorder"> </div>
-					<div class="col-xs-4 .col-sm-4 col-md-4">
-						<div class="Lthumbnail">
-							<div class="WDanimateL">
-								<a class="img-thumbnail" href="#"><div id="WDthumbL"></div></a>
-								<div class="caption">
-									<h4 class="first_WD_title"> Insert Title of project </h4>
-								</div>
-							</div>
-						</div>
-					</div>
+								<div class="supportThumbnials Lthumbnail SDanimateL">
+									<a class="img-thumbnail" href="#"><div id="SDthumbL"></div></a>
+									<div class="caption">
+										<!-- active title changing based on project loaded onto page Jquery -->
+										<h4 class="first_SD_title"> Insert Title of project </h4>
+									</div>
+								</div>					
 
-					<div class="col-xs-4 .col-sm-4 col-md-4">
-						<div class="Cthumbnail">
-							<div class="WDanimateC">
-								<a class="img-thumbnail" href="#"><div id="WDthumb"></div></a>
-								<div class="caption">
-									<h4 class="second_WD_title"> Insert Title of project </h4>
+								<div class="supportThumbnials Cthumbnail SDanimateC">
+									<a class="img-thumbnail" href="#"><div id="SDthumb"></div></a>
+									<div class="caption">
+										<h4 class="second_SD_title"> Insert Title of project </h4>
+									</div>
 								</div>
+					
+								<div class="supportThumbnials Rthumbnail SDanimateR">
+									<a class="img-thumbnail" href="#"><div id="SDthumbR"></div></a>
+									<div class="caption">
+										<h4 class="third_SD_title"> Insert Title of project </h4>
+									</div>
+								</div>
+					
 							</div>
 						</div>
-					</div>
 
-					<div class="col-xs-4 .col-sm-4 col-md-4">
-						<div class="Rthumbnail">
-							<div class="WDanimateR">
-								<a class="img-thumbnail" href="#"><div id="WDthumbR"></div></a>
-								<div class="caption">
-									<h4 class="third_WD_title"> Insert Title of project </h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+						<div class="row" id="GDanimationElement">
+							<h3> <strong> Latest: Game Development </strong></h3>
+							<div class="rowBorder"> </div>
+							<div class ="thumbnailRow">
 
-			<div class="row">
-				<div id="GanimationElement">
-					<h3> <strong> Latest: Graphic Design </strong> </h3>
-					<div class="rowBorder"> </div>
-					<div class="col-xs-4 .col-sm-4 col-md-4">
-						<div class="Lthumbnail">
-							<div class="GanimateL">
-								<a class="img-thumbnail" href="pages/GraphicDesign.html"><div id="GthumbL"></div></a>
-								<div class="caption">
-									<h4 class="first_G_title"> Austin city skyline </h4>
+								<div class="supportThumbnials Lthumbnail GDanimateL">
+									<a class="img-thumbnail" href="#"><div id="GDthumbL"></div></a>
+									<div class="caption">
+										<!-- active title changing based on project loaded onto page Jquery -->
+										<h4 class="first_GD_title"> Insert Title of project </h4>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
 
-					<div class="col-xs-4 .col-sm-4 col-md-4">
-						<div class="Cthumbnail">
-							<div class="GanimateC">
-								<a class="img-thumbnail" href="pages/GraphicDesign.html"><div id="Gthumb"></div></a>
-								<div class="caption">
-									<h4 class="second_G_title"> Insert Title of project </h4>
+								<div class="supportThumbnials Cthumbnail GDanimateC">
+									<a class="img-thumbnail" href="#"><div id="GDthumb"></div></a>
+									<div class="caption">
+										<h4 class="second_GD_title"> Insert Title of project </h4>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
 
-					<div class="col-xs-4 .col-sm-4 col-md-4">
-						<div class="Rthumbnail">
-							<div class="GanimateR">
-								<a class="img-thumbnail" href="pages/GraphicDesign.html"><div id="GthumbR"></div></a>
-								<div class="caption">
-									<h4 class="third_G_title"> Insert Title of project </h4>
+								<div class="supportThumbnials Rthumbnail GDanimateR">
+									<a class="img-thumbnail" href="#"><div id="GDthumbR"></div></a>
+									<div class="caption">
+										<h4 class="third_GD_title"> Insert Title of project </h4>
+									</div>
 								</div>
+
 							</div>
 						</div>
+
+						<div class="row" id="WDanimationElement">
+							<h3> <strong> Latest: Web Development </strong></h3>
+							<div class="rowBorder"> </div>
+							<div class ="thumbnailRow">
+
+								<div class="supportThumbnials Lthumbnail WDanimateL">
+									<a class="img-thumbnail" href="#"><div id="WDthumbL"></div></a>
+									<div class="caption">
+										<h4 class="first_WD_title"> Insert Title of project </h4>
+									</div>
+								</div>
+
+								<div class="supportThumbnials Cthumbnail WDanimateC">
+									<a class="img-thumbnail" href="#"><div id="WDthumb"></div></a>
+									<div class="caption">
+										<h4 class="second_WD_title"> Insert Title of project </h4>
+									</div>
+								</div>
+
+								<div class="supportThumbnials Rthumbnail WDanimateR">
+									<a class="img-thumbnail" href="#"><div id="WDthumbR"></div></a>
+									<div class="caption">
+										<h4 class="third_WD_title"> Insert Title of project </h4>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row" id="GanimationElement">
+							<h3> <strong> Latest: Graphic Design </strong> </h3>
+							<div class="rowBorder"> </div>
+							<div class ="thumbnailRow">
+
+								<div class="supportThumbnials Lthumbnail GanimateL">
+									<a class="img-thumbnail" href="pages/GraphicDesign.html"><div id="GthumbL"></div></a>
+									<div class="caption">
+										<h4 class="first_G_title"> Austin city skyline </h4>
+									</div>
+								</div>
+
+								<div class="supportThumbnials Cthumbnail GanimateC">
+									<a class="img-thumbnail" href="pages/GraphicDesign.html"><div id="Gthumb"></div></a>
+									<div class="caption">
+										<h4 class="second_G_title"> Insert Title of project </h4>
+									</div>
+								</div>
+
+								<div class="supportThumbnials Rthumbnail GanimateR">
+									<a class="img-thumbnail" href="pages/GraphicDesign.html"><div id="GthumbR"></div></a>
+									<div class="caption">
+										<h4 class="third_G_title"> Insert Title of project </h4>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
 		</div>
+	
 	</div>
 
 <!-- footer (shameless tradmark and social meadia plugs) -->
@@ -249,6 +224,14 @@ to show the latest projects in each field to entice a look at a library page and
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<!-- The scroll to top feature -->
+    
+	<div class="scroll-top-wrapper ">
+	  <span class="scroll-top-inner">
+	    <span style="font-size:1.5em;" class="glyphicon glyphicon-chevron-up"></span>
+	  </span>
 	</div>
 </div>
 </body>

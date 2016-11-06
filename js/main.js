@@ -11,19 +11,19 @@
 	var sectionView = {
 		SD:{
 			visib: false,
-			firstView: false
+			firstView: 0
 		},
 		GD:{
 			visib: false,
-			firstView: false
+			firstView: 0
 		},
 		WD:{
 			visib: false,
-			firstView: false
+			firstView: 0
 		},
 		G:{
 			visib: false,
-			firstView: false
+			firstView: 0
 		}
 	};
 
@@ -68,16 +68,32 @@ var main = function() {
 //////////////////////////////////////////////////////////////////
 // 				drop down menu portfolio						//
 
-	$('.portfolio').click(function(){
-    	$('.dropdown-menu').toggle();
-    
-	});
+	$('.dropdown').hover(
+    	function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+	);
 
 
 //////////////////////////////////////////////////////////////////
-// 				Image hover enlarge images						//
+// 				scroll back to top feature						//
 
-//performed with css :hover and :active
+    $(document).on( 'scroll', function(){
+ 
+    	if ($(window).scrollTop() > 500) {
+			$('.scroll-top-wrapper').addClass('show');
+		} else {
+			$('.scroll-top-wrapper').removeClass('show');
+		}
+	});
+ 
+	$('.scroll-top-wrapper').on('click', scrollToTop);
+
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -86,14 +102,22 @@ var main = function() {
 // 			Images from development section move  				//
 
 
-
-
-
 };
 
 $(document).ready(main);
 
 
+
+
+
+// animation to bring the window to the top of the document
+function scrollToTop() {
+	verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+	element = $('body');
+	offset = element.offset();
+	offsetTop = offset.top;
+	$('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
+}
 
 	// function that if scrolled will hide the header section.
 function animateHeader(){
@@ -178,33 +202,91 @@ function checkWindowView(){
 	}
 }
 
+// first view should be false if you want it to play everytime you see it and 0 if you want the animation to only run once
+// also view object should be changed to false 
 function animateSections(){
 
+		//software development section animations
 	if (sectionView.SD.visib && sectionView.SD.firstView){
-		console.log("software dev run animation")
-		// run animation
-		$('.SDanimateL').animate({marginRight: '-=300px'},2000);
-		$('.SDanimateC').animate({marginRight: '-=600px'},2000);
-		$('.SDanimateR').animate({marginRight: '-=900px'},2000);
+		console.log("software dev run animation");
+		// run animation when you see it first
+		$('.SDanimateL').animate({right: '10%'}, 2500);
+		$('.SDanimateC').animate({right: '0'}, 1750);
+		$('.SDanimateR').animate({right: '-10%'}, 1000);
 
 		sectionView.SD.firstView = false;
 
-	} else if ( sectionView.SD.visib == false && sectionView.SD.firstView == false){
+	} else if ( sectionView.SD.visib == false && sectionView.SD.firstView === 0){
 		sectionView.SD.firstView = true;
-		console.log("software dev reset to first view")
-		$('.SDanimateL').animate({marginRight: '+=300px'},0000);
-		$('.SDanimateC').animate({marginRight: '+=600px'},0000);
-		$('.SDanimateR').animate({marginRight: '+=900px'},0000);
-		// $('.SDanimateL').css({marginRight: '-=300px'});
-		// $('.SDanimateC').css({marginRight: '-=300px'});
-		// $('.SDanimateR').css({marginRight: '-=300px'});
+		console.log("software dev reset to first view");
+		// run animation when its out of view
+		$('.SDanimateL').css({right: '75%'});
+		$('.SDanimateC').css({right: '75%'});
+		$('.SDanimateR').css({right: '75%'});
 	}
 
 
 
-		// $('#SDanimationElement').css('visibility', 'visible').delay(500);	
-		// $('#SDanimationElement').css('visibility', 'hidden');
+		//Game development section animations
+	if (sectionView.GD.visib && sectionView.GD.firstView){
+		console.log("game dev run animation");
+		// run animation when you see it first
+		$('.GDanimateL').animate({left: '-10%'}, 1000);
+		$('.GDanimateC').animate({left: '0'}, 1750);
+		$('.GDanimateR').animate({left: '10%'}, 2500);
 
+		sectionView.GD.firstView = false;
+
+	} else if ( sectionView.GD.visib == false && sectionView.GD.firstView === 0){
+		sectionView.GD.firstView = true;
+		console.log("game dev reset to first view");
+		// run animation when its out of view
+		$('.GDanimateL').css({left: '100%'});
+		$('.GDanimateC').css({left: '100%'});
+		$('.GDanimateR').css({left: '100%'});
+	}
+
+
+
+		//Web development section animations
+	if (sectionView.WD.visib && sectionView.WD.firstView){
+		console.log("game dev run animation");
+		// run animation when you see it first
+		$('.WDanimateL').animate({right: '10%'}, 2500);
+		$('.WDanimateC').animate({right: '0'}, 1750);
+		$('.WDanimateR').animate({right: '-10%'}, 1000);
+
+		sectionView.WD.firstView = false;
+
+	} else if ( sectionView.WD.visib == false && sectionView.WD.firstView === 0){
+		sectionView.WD.firstView = true;
+		console.log("game dev reset to first view");
+		// run animation when its out of view
+		$('.WDanimateL').css({right: '100%'});
+		$('.WDanimateC').css({right: '100%'});
+		$('.WDanimateR').css({right: '100%'});
+	}
+
+
+
+		//Graphic Design section animations
+	if (sectionView.G.visib && sectionView.G.firstView){
+		console.log("Graphic Design run animation");
+		// run animation when you see it first
+		$('.GanimateL').animate({left: '-10%'}, 1000);
+		$('.GanimateC').animate({left: '0'}, 1750);
+		$('.GanimateR').animate({left: '10%'}, 2500);
+
+		sectionView.G.firstView = false;
+
+	} else if ( sectionView.G.visib == false && sectionView.G.firstView === 0){
+		sectionView.G.firstView = true;
+		console.log("Graphic Design reset to first view");
+		// run animation when its out of view
+		$('.GanimateL').css({left: '100%'});
+		$('.GanimateC').css({left: '100%'});
+		$('.GanimateR').css({left: '100%'});
+	}
 }
 
 
@@ -216,40 +298,3 @@ function animateSections(){
 
 
 
-
-// 	if (GDelementMidPosition >= windowTopPosition && GDelementTopPosition <= windowBottomPosition) {
-// 		// game dev from the right
-// 		$('.GDanimateL').delay().fadeIn();
-// 		$('.GDanimateC').delay(500).fadeIn();
-// 		$('.GDanimateR').delay(1000).fadeIn();
-
-// 	} else {
-// 		$('.GDanimationElement').fadeOut()
-		
-// 	}
-
-
-
-// 	if (WDelementMidPosition >= windowTopPosition && WDelementTopPosition <= windowBottomPosition) {
-// 		// web dev from the left
-// 		$('.WDanimateL').delay().fadeIn();
-// 		$('.WDanimateC').delay(500).fadeIn();
-// 		$('.WDanimateR').delay(1000).fadeIn();
-
-// 	} else {
-// 		$('.WDanimationElement').fadeOut()
-
-// 	}
-
-
-
-// 	if (GelementMidPosition >= windowTopPosition && GelementTopPosition <= windowBottomPosition) {
-// 		// graphic design from the right
-// 		$('.GanimateL').delay().fadeIn();
-// 		$('.GanimateC').delay(500).fadeIn();
-// 		$('.GanimateR').delay(1000).fadeIn();
-
-// 	} else {
-// 		$('.GanimationElement').fadeOut()
-// 	}
-// }
