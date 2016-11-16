@@ -1,0 +1,143 @@
+.support{
+	background-color: #ECECEC;
+	padding-bottom:10px;
+}
+.support p{
+	padding-left:80px;
+	font-size:16px;
+}
+.support h1{
+	padding-left:50px;
+	color:red;
+}
+
+.support h3{
+	padding-left:20px;
+}
+.support h5{
+	padding-left:20px;
+}
+
+
+
+.section p{
+	padding-top:10px;
+}
+
+.CenterButton{ 
+	padding:10px 0 10px 0;
+	margin:auto;
+ }
+
+.preview{
+	max-height:250px;
+	width:auto;
+	margin:0 25px 25px 25px;
+	padding-left:15px;
+}
+
+.sectionBorder{
+	border-bottom:1px solid grey;
+	width:80%;
+	padding-top:5px;
+	display: block;
+ 	margin-left: auto;
+  	margin-right: auto;
+}
+
+.btn{
+	width: 200px;
+	background-color: rgba(0,0,0,.5);
+	color:white;
+}
+
+.btn:hover{
+	width: 190px;
+	background-color: rgba(0,0,0,.75);
+	color:white;
+}
+
+
+
+.section #Visualizer p{
+	padding:0;
+}
+
+
+
+
+
+
+
+.support .img-thumbnail{
+	border:0.125px solid grey;
+	padding:2px;
+}
+
+.softdevThumbnials{
+	display:inline-block;
+	margin: 0px auto;
+	position:relative;
+	padding-top: 30px;
+	padding-right: 17px;
+	padding-left:17px;
+	width:200px;
+}
+
+
+.support .Lthumbnail{
+	float:right;
+
+}
+
+.support .Cthumbnail{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.support .Rthumbnail{
+	float: left;
+}
+
+
+
+.support .caption{
+	max-width: 160px;
+	text-align: center;
+	margin:auto;
+}
+
+
+.support h3{
+	padding-left:30px;
+	text-align: left;
+}
+
+
+
+
+.support #visL {
+	background-image: url("../img/musicvishalfcircleup.PNG");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+	margin:auto;
+}
+
+.support #vis{
+	background-image: url("../img/musicvishalfcircleout.PNG");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}
+
+.support #visR{
+	background-image: url("../img/musicviswallup.PNG");
+	background-position:center;
+	background-size:cover;
+	width:160px;
+	height:160px;
+}

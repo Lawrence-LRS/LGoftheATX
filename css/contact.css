@@ -35,6 +35,12 @@
 	color:white;
 }
 
+.mediaPlugs .btn:hover{
+	width: 100px;
+	background-color: rgba(0,0,0,.75);
+	color:white;
+}
+
 .mediaPlugs .mediaPlugsBorder, #formborder, #socialBorder{
 	border-bottom:1px solid grey;
 	width:75%;

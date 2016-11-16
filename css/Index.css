@@ -39,20 +39,9 @@ padding-top:10px;
 
 
 
-.support .img-thumbnail{
+.supportThumbnials .img-thumbnail{
 	border:0.125px solid grey;
 	padding:2px;
-
-	/* Gray Scale */
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-
-	/* Shine */
-	position: relative;
-	left:0;
-	z-index: 0;
 }
 
 .support .img-thumbnail:hover{
@@ -87,10 +76,20 @@ padding-top:10px;
 
 
 
-.support .img-thumbnail:active{
-	background-color: rgba(0,0,0,.5);
-	transform: scale(.95);
-	-webkit-transition: -webkit-transform 1.5s ease-in-out;
+.support .img-thumbnail{
+	border:0.125px solid grey;
+	padding:2px;
+
+	/* Gray Scale */
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+	/* Shine */
+	position: relative;
+	left:0;
+	z-index: 0;
 }
 
 
@@ -150,7 +149,7 @@ padding-top:10px;
 
 
 #SDthumbL {
-	background-image: url("../img/imageToCome.jpg");
+	background-image: url("../img/musicvishalfcircleout.PNG");
 	background-position:center;
 	background-size:cover;
 	width:160px;
@@ -175,7 +174,7 @@ padding-top:10px;
 
 
 #GDthumbL{
-	background-image: url("../img/imageToCome.jpg");
+	background-image: url("../img/SpaceCowboygamebook.PNG");
 	background-position:center;
 	background-size:cover;
 	width:160px;

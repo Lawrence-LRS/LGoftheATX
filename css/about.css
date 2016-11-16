@@ -20,7 +20,7 @@
 
 
 .aboutTitle{
-	max-width: 550px;
+	max-width: 750px;
 	margin:auto;
 	padding-top:10px;
 }
@@ -69,4 +69,8 @@
 	width:75%;
 	padding-top:5px;
 	margin:auto;
+}
+
+.activeStar{
+	color:black;
 }

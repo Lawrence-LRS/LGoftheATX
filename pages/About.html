@@ -8,38 +8,50 @@
 <!--css file-->
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/about.css">
+<!-- J-Query -->
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<!-- Javascript -->
+	<script type='text/javascript' src="../js/about.js"></script>
+
 </head>
 
 <body>
+<div class = "wrapper">
 <!-- Jumbotron for skyline to be behind header -->
  	<div class="jumbotron">
 <!-- Header section (will have it hide with Jquery as you scroll down page) -->
-			<div class="header">
+			<div class="header nav-down">
 				<div class="container-fluid">
 					<!-- logo section fixed sized -->
 					<div class="row">
 						<div class=" col-xs-6 .col-sm-6 col-md-6">
-							<a href="../index.html"><div class="titleLogo"> 
+							<a href="../index.html">
+								<div class="titleLogo"> 
 									<div class="logo"><img src="../img/LRS_Logo.png" class="img-circle"></div>
 									<p class="title">  Little Rocket Studio </p>
-								</div></a>
+								</div>
+							</a>
 						</div>
 						<!-- Right side NAV bar -->
-						<div class=" col-xs-6 .col-sm-6 col-md-6">			
-							<ul class="navagation" >
-								<li class="menu" > <a class="links" href="../pages/About.html"> About </a> </li>
-								<!-- Portfolio is a dropdrop (Jquery) for multi-selection -->
-								<li class="menu" class="dropdown">
-								<a class="links" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" > Portfolio <!-- (later accordian) --> <span class="caret"> </span></a>
-									<ul class="dropdown-menu">
-										<li> <a href="#"> Software Development </a> </li> 
-										<li> <a href="#"> Game Development </a> </li> 
-										<li> <a href="#"> Web Development </a> </li> 
-										<li> <a href="#"> Graphic Design </a> </li> 
-									</ul>
-							    </li>
-								<li class="menu" > <a class="links" href="../pages/Contact.html"> Contact </a> </li>
-							</ul>
+						<div class=" col-xs-6 .col-sm-6 col-md-6">		
+							<div class = "navagation">
+								<ul>
+									<li class="menu" > <a href="../pages/About.html"> About </a> </li>
+
+									<li class="menu dropdown">
+			 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <span class="caret"></span></a>				
+			  							<ul class="dropdown-menu" role="menu">
+											<li> <a href="softDevelopment/softdevindex.html"> Software Development </a> </li> 
+											<li> <a href="gameDevelopment/gamedevIndex.html"> Game Development </a> </li> 
+											<li> <a href="#"> Web Development </a> </li> 
+											<li> <a href="GraphicDesign.html"> Graphic Design </a> </li>  
+										</ul>
+								    </li>
+
+								    <li class="menu" > <a  href="../pages/Contact.html"> Contact </a> </li>
+								</ul>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -64,7 +76,7 @@
 
 <!-- Middle section (meat of the page) -->
 	<div class="support">
-		<h2  class="aboutTitle" style="text-align:center"> Ask now and be a fool for a minute, ask not and be a fool for life </h2> 
+		<h2  class="aboutTitle" style="text-align:center"> "The man who asks a question is a fool for a minute, the man who does not ask is a fool for life" ― Confucius</h2> 
 		<div class="about">
 			<div class="container-fluid">
 				<div class="row">
@@ -99,11 +111,11 @@
 										<div class="ability-title">HTML</div>
 
 										<div class="ability-score">
-											<span class="glyphicon glyphicon-star-empty "></span>	
-											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
+											<span class="glyphicon glyphicon-star-empty"></span>	
+											<span class="glyphicon glyphicon-star-empty"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
 										</div>
 									</li>
 
@@ -113,9 +125,9 @@
 										<div class="ability-score">
 											<span class="glyphicon glyphicon-star-empty "></span>	
 											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
 										</div>
 									</li>
 									
@@ -125,9 +137,9 @@
 										<span class="ability-score">
 											<span class="glyphicon glyphicon-star-empty "></span>	
 											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
 										</span>
 									</li>
 									<li>
@@ -136,9 +148,9 @@
 										<span class="ability-score">
 											<span class="glyphicon glyphicon-star-empty "></span>	
 											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
 										</span>
 									</li>
 									<li>
@@ -147,9 +159,9 @@
 										<span class="ability-score">
 											<span class="glyphicon glyphicon-star-empty "></span>	
 											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
 										</span>
 									</li>
 								</ul>
@@ -162,9 +174,9 @@
 										<span class="ability-score">
 											<span class="glyphicon glyphicon-star-empty "></span>	
 											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
 										</span>
 									</li>
 									
@@ -175,8 +187,8 @@
 											<span class="glyphicon glyphicon-star-empty "></span>	
 											<span class="glyphicon glyphicon-star-empty "></span>
 											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star-empty "></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
 										</span>
 									</li>
 
@@ -187,8 +199,8 @@
 											<span class="glyphicon glyphicon-star-empty "></span>	
 											<span class="glyphicon glyphicon-star-empty "></span>
 											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star-empty "></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
 										</span>
 									</li>
 
@@ -216,10 +228,10 @@
 
 								<span class="ability-score"> <font size=2>(1 years)</font>
 									<span class="glyphicon glyphicon-star-empty "></span>	
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
@@ -227,11 +239,11 @@
 								<span class="ability-title">3D CAD</span>
 
 								<span class="ability-score"> <font size=2>(7 years)</font>
-									<span class="glyphicon glyphicon-star "></span>	
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>	
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 							
@@ -241,9 +253,9 @@
 								<span class="ability-score">
 									<span class="glyphicon glyphicon-star-empty "></span>	
 									<span class="glyphicon glyphicon-star-empty "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
@@ -254,8 +266,8 @@
 									<span class="glyphicon glyphicon-star-empty "></span>	
 									<span class="glyphicon glyphicon-star-empty "></span>
 									<span class="glyphicon glyphicon-star-empty "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 							<li>
@@ -264,9 +276,9 @@
 										<span class="ability-score">
 											<span class="glyphicon glyphicon-star-empty "></span>	
 											<span class="glyphicon glyphicon-star-empty "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
-											<span class="glyphicon glyphicon-star "></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
+											<span class="glyphicon glyphicon-star-empty filledStar"></span>
 										</span>
 									</li>
 						</ul>	
@@ -283,10 +295,10 @@
 
 								<span class="ability-score">
 									<span class="glyphicon glyphicon-star-empty "></span>	
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
@@ -296,9 +308,9 @@
 								<span class="ability-score">
 									<span class="glyphicon glyphicon-star-empty "></span>	
 									<span class="glyphicon glyphicon-star-empty "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
@@ -307,10 +319,10 @@
 
 								<span class="ability-score">
 									<span class="glyphicon glyphicon-star-empty "></span>	
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
@@ -319,22 +331,22 @@
 
 								<span class="ability-score">
 									<span class="glyphicon glyphicon-star-empty "></span>	
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
 							<li>
-								<span class="skillsTitle">Team-Leadership (project manger tasks)</span>
+								<span class="skillsTitle">Project mangment </span>
 
 								<span class="ability-score">
 									<span class="glyphicon glyphicon-star-empty "></span>	
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 						</ul>
@@ -347,7 +359,7 @@
 								<span class="Ledgend-title">I have had previous exposure</span>
 
 								<span class="ability-score">
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
@@ -355,8 +367,8 @@
 								<span class="Ledgend-title">I have practical experience with</span>
 
 								<span class="ability-score">
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
@@ -364,20 +376,20 @@
 								<span class="Ledgend-title">I have created projects with</span>
 
 								<span class="ability-score">
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
 							<li>
-								<span class="Ledgend-title">I am famaliar with its capabilities and limits</span>
+								<span class="Ledgend-title">I am know its capabilities and limits</span>
 
 								<span class="ability-score">
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 
@@ -385,11 +397,11 @@
 								<span class="Ledgend-title">The best there ever was</span>
 
 								<span class="ability-score">
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
-									<span class="glyphicon glyphicon-star "></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
+									<span class="glyphicon glyphicon-star-empty filledStar"></span>
 								</span>
 							</li>
 						</ul>
@@ -484,6 +496,15 @@
 			</div>
 		</div>
 	</div>
+	<!-- The scroll to top feature -->
+    
+	<div class="scroll-top-wrapper ">
+	  <span class="scroll-top-inner">
+	    <span style="font-size:1.5em;" class="glyphicon glyphicon-chevron-up"></span>
+	  </span>
+	</div>
+</div>
+
 </body>
 
 </html>

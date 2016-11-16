@@ -2,31 +2,32 @@
 <html>
 
 <head>
-	<title>Home Little Rocket Studio</title>
+	<title>Little Rocket Studio</title>
 <!--For columed sections -->
 	<link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
 <!--css file-->
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" type="text/css" href="../css/graphicDesign.css">
+	<link rel="stylesheet" type="text/css" href="../../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../../css/devindex.css">
 <!-- J-Query -->
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <!-- Javascript -->
-	<script type='text/javascript' src="../js/graphicdesign.js"></script>
+	<script type='text/javascript' src="../../js/devlist.js"></script>
+	
 </head>
 
 <body>
 <div class = "wrapper">
-<!-- Jumbotron for skyline to be behind header -->
+	<!-- Jumbotron for skyline to be behind header -->
  	<div class="jumbotron">
-<!-- Header section (will have it hide with Jquery as you scroll down page) -->
+	<!-- Header section (will have it hide with Jquery as you scroll down page) -->
 			<div class="header nav-down">
 				<div class="container-fluid">
 					<!-- logo section fixed sized -->
 					<div class="row">
 						<div class=" col-xs-6 .col-sm-6 col-md-6">
-							<a href="../index.html">
+							<a href="../../index.html">
 								<div class="titleLogo"> 
-									<div class="logo"><img src="../img/LRS_Logo.png" class="img-circle"></div>
+									<div class="logo"><img src="../../img/LRS_Logo.png" class="img-circle"></div>
 									<p class="title">  Little Rocket Studio </p>
 								</div>
 							</a>
@@ -35,19 +36,19 @@
 						<div class=" col-xs-6 .col-sm-6 col-md-6">		
 							<div class = "navagation">
 								<ul>
-									<li class="menu" > <a href="../pages/About.html"> About </a> </li>
+									<li class="menu" > <a href="../About.html"> About </a> </li>
 
 									<li class="menu dropdown">
 			 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <span class="caret"></span></a>				
 			  							<ul class="dropdown-menu" role="menu">
-											<li> <a href="softDevelopment/softdevindex.html"> Software Development </a> </li> 
-											<li> <a href="gameDevelopment/gamedevindex.html"> Game Development </a> </li> 
+											<li> <a href="../softDevelopment/softdevindex.html"> Software Development </a> </li> 
+											<li> <a href="#"> Game Development </a> </li> 
 											<li> <a href="#"> Web Development </a> </li> 
-											<li> <a href="GraphicDesign.html"> Graphic Design </a> </li>  
+											<li> <a href="../GraphicDesign.html"> Graphic Design </a> </li>  
 										</ul>
 								    </li>
 
-								    <li class="menu" > <a  href="../pages/Contact.html"> Contact </a> </li>
+								    <li class="menu" > <a  href="../Contact.html"> Contact </a> </li>
 								</ul>
 							</div>
 
@@ -60,51 +61,49 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="Jumbo-title">
-					<h2 style="max-width:500px"> <strong> Lets take a look at some of the Graphic element design work </strong> </h2>
+					<h2> <strong> Game Development related projects </strong> </h2>
 				</div>
 			</div>
 		</div>
 	</div>
 
-
-
-<!-- Middle section (meat of the page) -->
+	<!-- Middle section (meat of the page) / the intention is to have this update automatically 
+	to show the latest projects in each field to entice a look at a library page and move onto all projects-->
 	<div class="support">
-		<h2  class="graphicDesignTitle" style="text-align:center"> Graphic designs including alterations and original work </h2> 
-		<div class="graphicDesign">
-			<div class="container-fluid">
-<!-- 			Going to have a script add each graphic design entry as a new row ontop of this creating a continous list
-			the different boxes/ a list in the upper corner will allow you to auto scroll to the different projects. -->
-				<div class="row">
-					<h1> Austin city skyline alteration </h1>
-					<h4> Software used: Photoshop (9/2016)</h4>
-					<div class="graphicDesignBorder"></div>
-					<div class="textdescription">
-						<p>
-						I was searching for an Austin skyline to be used as the header piece for this website, I found one from the Austin,TX wikipedia page, but it just wasn't what I wanted. There wasn't enough sky to add a header for the website and I wanted to make a few other alterations. After finishing extending the sky and croping the river, I removed the boat on the right, I adjusted hue and saturation of the skyline and water seperatly giving a nutral base while excentuating the city lights. I would really like to replace it with an original watercolor work.</p>
+		<div class="container-fluid section">	
+
+			<div class ="container-fluid">
+				<div class="row" id="SpaceCowboyGamebook">
+					<h1> SpaceCowboy Gamebook </h1>
+					
+					<div class="sectionBorder"></div>
+
+					<div class ="container-fluid">
+						<div class="row">
+							<div class="col-xs-4 .col-sm-4 col-md-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4">
+
+								<div class="CenterButton">
+									<a class="plugBtn" href="SpaceCowboy/index.html"> 
+										<button class="btn btn-default btn-lg center-block"> Click me to play </button> 
+									</a>
+								</div>
+							</div>
+							<div class="col-xs-10 .col-sm-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1"> 
+								<img src="../../img/SpaceCowboygamebook.PNG" class="img-responsive pull-right preview" />	
+
+								<p> This is a text based choose your own adventure game. The main object of the game is to explore the spaceship and await Johns return. You are given the choices to explore for treasures, go check out various noises, or sit tight and wait for John. This game was developed completely in JS-vanilla making the most difficult part getting asynchronous commands without ajax. JS by nature is multi-threaded, but a choose your own adventure, with text input is a single-threaded application. This was accomplished with multiple callbacks and nested listening events that would wait for user input before continuing. The second challenge while trivial was getting the text to delay when posting to the the dialoge box wich is all ran on second delays from initial starts, or else it would show up out of order or pages at a time making it impossible to play.</p>
+							</div>
+						</div>
 					</div>
+
 				</div>
 			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="images">
-						<div class="col-xs-6 .col-sm-6 col-md-6">
-							<p> <b>Original photo:</b></p>
-							<img src="../img/Skyline.jpg" class="img-responsive profile" id="before1"/>
-						</div>
-						<div class="col-xs-6 .col-sm-6 col-md-6">
-							<p> <b>Altered final photo:</b></p>
-							<img src="../img/Skyline_cropped.jpg" class="img-responsive profile" id="after1" />
-						</div>	
-					</div>
-				</div>	
-			</div>
-		</div>
+			
+
+		</div>	
 	</div>
-	
 
-
-<!-- footer (shameless tradmark and social meadia plugs) -->
+	<!-- footer (shameless tradmark and social meadia plugs) -->
 	<div class="footer">
 		<div class="container-fluid">
 			<div class="row">

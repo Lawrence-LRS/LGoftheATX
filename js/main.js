@@ -50,19 +50,9 @@ var main = function() {
 	        animateSections(); // home page animation of sections
 	        didScroll = false;
 	    }
-	}, 250);
+	}, 125);
 
  
-
-
-//////////////////////////////////////////////////////////////////
-// 				return from the bottom of the page				//
-
-	//button on bottom page to return to top
-	$('#spnTop').on("click",function(){
-		$('html,body').animate({ scrollTop: 0 }, 'slow');
-	}); 
-
 
 
 //////////////////////////////////////////////////////////////////
@@ -108,8 +98,6 @@ $(document).ready(main);
 
 
 
-
-
 // animation to bring the window to the top of the document
 function scrollToTop() {
 	verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
@@ -142,6 +130,7 @@ function animateHeader(){
 	lastScrollTop = newScrollTop;
 }
 
+
 	// used to check window lowcation and run hide show functions
 	// forgive me
 function checkWindowView(){
@@ -154,48 +143,44 @@ function checkWindowView(){
 		// software development element sizing
 	var SDelementHeight = $('#SDanimationElement').outerHeight();
 	var SDelementTopPosition = $('#SDanimationElement').offset().top;
-	var SDelementMidPosition = ( SDelementTopPosition + SDelementHeight);
+	var SDelementMidPosition = ( SDelementTopPosition + SDelementHeight/2);
 
 		// graphic development element sizing
 	var GDelementHeight = $('#GDanimationElement').outerHeight();
 	var GDelementTopPosition = $('#GDanimationElement').offset().top;
-	var GDelementMidPosition = ( GDelementTopPosition + GDelementHeight);
+	var GDelementMidPosition = ( GDelementTopPosition + GDelementHeight/2);
 
 		// web development element sizing
 	var WDelementHeight = $('#WDanimationElement').outerHeight();
 	var WDelementTopPosition = $('#WDanimationElement').offset().top;
-	var WDelementMidPosition = ( WDelementTopPosition + WDelementHeight);
+	var WDelementMidPosition = ( WDelementTopPosition + WDelementHeight/2);
 
 		// graphic design element sizing
 	var GelementHeight = $('#GanimationElement').outerHeight();
 	var GelementTopPosition = $('#GanimationElement').offset().top;
-	var GelementMidPosition = ( GelementTopPosition + GelementHeight);
+	var GelementMidPosition = ( GelementTopPosition + GelementHeight/2);
 
 
 	//check to see if next container is in window
-	if (SDelementMidPosition >= windowTopPosition && SDelementTopPosition <= windowBottomPosition) {
-		console.log("software development in field");
+	if (SDelementMidPosition >= windowTopPosition && SDelementMidPosition <= windowBottomPosition) {
 		sectionView.SD.visib = true;
 	} else {
 		sectionView.SD.visib = false;
 	}
 
-	if (GDelementMidPosition >= windowTopPosition && GDelementTopPosition <= windowBottomPosition) {
-		console.log("Game development in field");
+	if (GDelementMidPosition >= windowTopPosition && GDelementMidPosition <= windowBottomPosition) {
 		sectionView.GD.visib = true;
 	} else {
 		sectionView.GD.visib = false;
 	}
 
-	if (WDelementMidPosition >= windowTopPosition && WDelementTopPosition <= windowBottomPosition) {
-		console.log("Web development in field");
+	if (WDelementMidPosition >= windowTopPosition && WDelementMidPosition <= windowBottomPosition) {
 		sectionView.WD.visib = true;
 	} else {
 		sectionView.WD.visib = false;
 	}
 
-	if (GelementMidPosition >= windowTopPosition && GelementTopPosition <= windowBottomPosition) {
-		console.log("Graphic Design in field");
+	if (GelementMidPosition >= windowTopPosition && GelementMidPosition <= windowBottomPosition) {
 		sectionView.G.visib = true;
 	} else {
 		sectionView.G.visib = false;
@@ -208,17 +193,15 @@ function animateSections(){
 
 		//software development section animations
 	if (sectionView.SD.visib && sectionView.SD.firstView){
-		console.log("software dev run animation");
 		// run animation when you see it first
-		$('.SDanimateL').animate({right: '10%'}, 2500);
-		$('.SDanimateC').animate({right: '0'}, 1750);
-		$('.SDanimateR').animate({right: '-10%'}, 1000);
+		$('.SDanimateL').animate({right: '10%'}, { easing: 'swing', duration: 2500});
+		$('.SDanimateC').animate({right: '0'}, { easing: 'swing', duration: 1750});
+		$('.SDanimateR').animate({right: '-10%'}, { easing: 'swing', duration: 1000});
 
 		sectionView.SD.firstView = false;
 
 	} else if ( sectionView.SD.visib == false && sectionView.SD.firstView === 0){
 		sectionView.SD.firstView = true;
-		console.log("software dev reset to first view");
 		// run animation when its out of view
 		$('.SDanimateL').css({right: '75%'});
 		$('.SDanimateC').css({right: '75%'});
@@ -229,17 +212,15 @@ function animateSections(){
 
 		//Game development section animations
 	if (sectionView.GD.visib && sectionView.GD.firstView){
-		console.log("game dev run animation");
 		// run animation when you see it first
-		$('.GDanimateL').animate({left: '-10%'}, 1000);
-		$('.GDanimateC').animate({left: '0'}, 1750);
-		$('.GDanimateR').animate({left: '10%'}, 2500);
+		$('.GDanimateL').animate({left: '-10%'}, { easing: 'swing', duration: 1000});
+		$('.GDanimateC').animate({left: '0'}, { easing: 'swing', duration: 1750});
+		$('.GDanimateR').animate({left: '10%'}, { easing: 'swing', duration: 2500});
 
 		sectionView.GD.firstView = false;
 
 	} else if ( sectionView.GD.visib == false && sectionView.GD.firstView === 0){
 		sectionView.GD.firstView = true;
-		console.log("game dev reset to first view");
 		// run animation when its out of view
 		$('.GDanimateL').css({left: '100%'});
 		$('.GDanimateC').css({left: '100%'});
@@ -250,17 +231,15 @@ function animateSections(){
 
 		//Web development section animations
 	if (sectionView.WD.visib && sectionView.WD.firstView){
-		console.log("game dev run animation");
 		// run animation when you see it first
-		$('.WDanimateL').animate({right: '10%'}, 2500);
-		$('.WDanimateC').animate({right: '0'}, 1750);
-		$('.WDanimateR').animate({right: '-10%'}, 1000);
+		$('.WDanimateL').animate({right: '10%'}, { easing: 'swing', duration: 2500});
+		$('.WDanimateC').animate({right: '0'}, { easing: 'swing', duration: 1750});
+		$('.WDanimateR').animate({right: '-10%'}, { easing: 'swing', duration: 1000});
 
 		sectionView.WD.firstView = false;
 
 	} else if ( sectionView.WD.visib == false && sectionView.WD.firstView === 0){
 		sectionView.WD.firstView = true;
-		console.log("game dev reset to first view");
 		// run animation when its out of view
 		$('.WDanimateL').css({right: '100%'});
 		$('.WDanimateC').css({right: '100%'});
@@ -271,30 +250,18 @@ function animateSections(){
 
 		//Graphic Design section animations
 	if (sectionView.G.visib && sectionView.G.firstView){
-		console.log("Graphic Design run animation");
 		// run animation when you see it first
-		$('.GanimateL').animate({left: '-10%'}, 1000);
-		$('.GanimateC').animate({left: '0'}, 1750);
-		$('.GanimateR').animate({left: '10%'}, 2500);
+		$('.GanimateL').animate({left: '-10%'}, { easing: 'swing', duration: 1000});
+		$('.GanimateC').animate({left: '0'}, { easing: 'swing', duration: 1750});
+		$('.GanimateR').animate({left: '10%'}, { easing: 'swing', duration: 2500});
 
 		sectionView.G.firstView = false;
 
 	} else if ( sectionView.G.visib == false && sectionView.G.firstView === 0){
 		sectionView.G.firstView = true;
-		console.log("Graphic Design reset to first view");
 		// run animation when its out of view
 		$('.GanimateL').css({left: '100%'});
 		$('.GanimateC').css({left: '100%'});
 		$('.GanimateR').css({left: '100%'});
 	}
 }
-
-
-
-
-
-
-
-
-
-
