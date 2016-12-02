@@ -29,11 +29,9 @@ padding-top:10px;
 
 
 
-
-
-
-
-
+body {
+    overflow-x: hidden !important;
+}
 
 
 
@@ -199,7 +197,7 @@ padding-top:10px;
 
 
 #WDthumbL{
-	background-image: url("../img/imageToCome.jpg");
+	background-image: url("../img/suggestionBox.png");
 	background-position:center;
 	background-size:cover;
 	width:160px;

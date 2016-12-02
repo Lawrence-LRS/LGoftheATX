@@ -148,7 +148,7 @@ html, body {
 
 /*Footer section for copyright image placement and colors*/
 .footer{
-	background-color: #C0C0C0;
+	background-color: #333A49;
 	color:white;
 
 	position: absolute;
@@ -164,7 +164,6 @@ html, body {
 }
 
 .socialMedia{
-	border: 1px solid black;
 	border-radius:5px;
 	display:inline;
 	margin:0 5px 0 5px;

@@ -203,9 +203,9 @@ function animateSections(){
 	} else if ( sectionView.SD.visib == false && sectionView.SD.firstView === 0){
 		sectionView.SD.firstView = true;
 		// run animation when its out of view
-		$('.SDanimateL').css({right: '75%'});
-		$('.SDanimateC').css({right: '75%'});
-		$('.SDanimateR').css({right: '75%'});
+		$('.SDanimateL').css({right: '100%'});
+		$('.SDanimateC').css({right: '100%'});
+		$('.SDanimateR').css({right: '100%'});
 	}
 
 
